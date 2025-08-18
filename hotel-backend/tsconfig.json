@@ -1,19 +1,15 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
 
     // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    "module": "nodenext",          // Node + ESM
+    "target": "esnext",            // Últimas features de JS
+    "moduleResolution": "nodenext",    // Resuelve módulos al estilo Node
+    "types": ["node"],             // Tipos de Node
+    "lib": ["esnext"],             // Librerías JS modernas
 
     // Other Outputs
     "sourceMap": true,
@@ -40,5 +36,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "esModuleInterop": true           // ⚡ Muy importante para usar import con CommonJS
   }
 }
